@@ -40,7 +40,7 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
-      ctx.fillStyle = 'hsl(238 ,' + 360 * Math.random() + '%, 50%)';
+      ctx.fillStyle = 'hsl(238 ,' + Math.random() * 100 + '%, 50%)';
     }
     ctx.fillRect(CLOUD_X + CLOUD_GAP + BAR_GAP + (BAR_GAP + BAR_WIDTH) * i, CLOUD_GAP + CLOUD_Y + textHeight * 3.5 + BAR_HEIGHT, BAR_WIDTH, -(BAR_HEIGHT * times[i]) / maxTime);
     ctx.fillStyle = 'rgb(0, 0, 0)';
